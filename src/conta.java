@@ -7,6 +7,15 @@ public class conta {
     private boolean status;
 
 
+    public void estadoAtual(){
+        System.out.println("--------------");
+        System.out.println("número da Conta: " + this.getNumConta());
+        System.out.println("Tipo: "+ this.getTipo());
+        System.out.println("dono: "+ this.getDono());
+        System.out.println("saldo: "+ this.getStatus());
+        System.out.println("status: "+this.getSaldo());
+    }
+
     //metodos
 
     public void abrirConta(String t) {
@@ -40,7 +49,8 @@ public class conta {
 
         }
     }
-        public void sacar(float sac){
+
+    public void sacar(float sac){
         if (getStatus()) {
             if (getSaldo()> sac) {
                 setSaldo(getSaldo() - sac);
@@ -72,9 +82,9 @@ public class conta {
 
 
     //Construtor
-    public conta(boolean status, float saldo) {
-        this.status = false;
-        this.saldo = 0;
+    public conta() {
+        this.setStatus(false);
+        this.setSaldo(0);
     }
 
 
